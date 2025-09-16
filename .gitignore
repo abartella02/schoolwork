@@ -1,0 +1,16 @@
+.venv/
+.idea/
+.exe
+
+# AutoDesk Inventor Artifacts
+OldVersions/
+Templates/
+Design Data/
+AIP/
+
+# 3SH3 Artifacts
+__MACOSX/
+
+# Quartus Artifacts
+.qsys_edit/
+nios_system/
