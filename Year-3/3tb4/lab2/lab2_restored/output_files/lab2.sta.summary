@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'state.BLINKING'
+Slack : -3.820
+TNS   : -3.820
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -2.980
+TNS   : -151.893
+
+Type  : Slow 1100mV 85C Model Setup 'clock_divider:comb_36|Pulse_ms'
+Slack : -2.317
+TNS   : -127.600
+
+Type  : Slow 1100mV 85C Model Hold 'clock_divider:comb_36|Pulse_ms'
+Slack : 0.276
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.387
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'state.BLINKING'
+Slack : 2.556
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.433
+TNS   : -28.428
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock_divider:comb_36|Pulse_ms'
+Slack : -0.394
+TNS   : -37.941
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'state.BLINKING'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'state.BLINKING'
+Slack : -3.851
+TNS   : -3.851
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -2.867
+TNS   : -143.785
+
+Type  : Slow 1100mV 0C Model Setup 'clock_divider:comb_36|Pulse_ms'
+Slack : -2.397
+TNS   : -126.406
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.133
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clock_divider:comb_36|Pulse_ms'
+Slack : 0.277
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'state.BLINKING'
+Slack : 2.582
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.469
+TNS   : -30.884
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock_divider:comb_36|Pulse_ms'
+Slack : -0.394
+TNS   : -37.470
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'state.BLINKING'
+Slack : 0.439
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -2.393
+TNS   : -76.614
+
+Type  : Fast 1100mV 85C Model Setup 'state.BLINKING'
+Slack : -1.700
+TNS   : -1.700
+
+Type  : Fast 1100mV 85C Model Setup 'clock_divider:comb_36|Pulse_ms'
+Slack : -1.067
+TNS   : -58.806
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.087
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clock_divider:comb_36|Pulse_ms'
+Slack : 0.093
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'state.BLINKING'
+Slack : 1.363
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.467
+TNS   : -5.178
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock_divider:comb_36|Pulse_ms'
+Slack : -0.009
+TNS   : -0.150
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'state.BLINKING'
+Slack : 0.448
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -1.877
+TNS   : -62.388
+
+Type  : Fast 1100mV 0C Model Setup 'state.BLINKING'
+Slack : -1.628
+TNS   : -1.628
+
+Type  : Fast 1100mV 0C Model Setup 'clock_divider:comb_36|Pulse_ms'
+Slack : -0.979
+TNS   : -50.314
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
+Slack : -0.125
+TNS   : -1.182
+
+Type  : Fast 1100mV 0C Model Hold 'clock_divider:comb_36|Pulse_ms'
+Slack : 0.080
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'state.BLINKING'
+Slack : 1.336
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.476
+TNS   : -5.175
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock_divider:comb_36|Pulse_ms'
+Slack : 0.030
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'state.BLINKING'
+Slack : 0.466
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,264 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/karee/OneDrive - McMaster University/3. Third Year/3TB/lab1/simulation/qsim
+vdff_lowsynchreset
+Z1 !s110 1675369269
+!i10b 1
+!s100 =L19Ya;WzYC]SAznd88o=3
+IHHD5U_Z3:ZPdWVD>30f8[0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1675369268
+Z3 8lab1part1.vo
+Z4 Flab1part1.vo
+Z5 L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1675369269.000000
+Z8 !s107 lab1part1.vo|
+Z9 !s90 -work|work|lab1part1.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vdff_lowsynchreset_vlg_vec_tst
+R1
+!i10b 1
+!s100 K:ZLW7R8EizGS@FBPiM5X1
+Ib_@iIbiSUKU^TIlFDEAcU0
+R2
+R0
+w1675369267
+8dff_lowsynchreset.vwf.vt
+Fdff_lowsynchreset.vwf.vt
+Z12 L0 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 dff_lowsynchreset.vwf.vt|
+!s90 -work|work|dff_lowsynchreset.vwf.vt|
+!i113 1
+R10
+R11
+vdff_lowsynchresetenable
+Z13 !s110 1675370015
+!i10b 1
+!s100 IkAWk:U2Y9eVU@KK=2DGH2
+I]P_JAegZFd2MlOFoG:PFg0
+R2
+R0
+w1675370015
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z14 !s108 1675370015.000000
+R8
+R9
+!i113 1
+R10
+R11
+vdff_lowsynchresetenable_vlg_vec_tst
+R13
+!i10b 1
+!s100 7jZknCemzGPo?bIPT1RK[0
+I`W8XgHz6l^E6S5=gdCf1b3
+R2
+R0
+w1675370014
+8dff_lowsynchresetenable.vwf.vt
+Fdff_lowsynchresetenable.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+R14
+!s107 dff_lowsynchresetenable.vwf.vt|
+!s90 -work|work|dff_lowsynchresetenable.vwf.vt|
+!i113 1
+R10
+R11
+vdflipflop
+Z15 !s110 1675368826
+!i10b 1
+!s100 4QTjBW<DQjf>6`6RV:T^60
+IoKFD4JFO5HLL]i9:h_zHQ2
+R2
+R0
+w1675368825
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+!s108 1675368825.000000
+R8
+R9
+!i113 1
+R10
+R11
+vdflipflop_vlg_vec_tst
+R15
+!i10b 1
+!s100 NKA<K=mPiGA7J@OJN84i>0
+ISXeS;HkdFiHn6LY5^Ia773
+R2
+R0
+w1675368824
+8dflipflop.vwf.vt
+Fdflipflop.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+!s108 1675368826.000000
+!s107 dflipflop.vwf.vt|
+!s90 -work|work|dflipflop.vwf.vt|
+!i113 1
+R10
+R11
+vdlatch_syncEnable
+Z16 !s110 1675370766
+!i10b 1
+!s100 5JgVof?a1J9P9m7iO[j]A1
+IcCXOUaK?E`XH=5jO=moi@3
+R2
+R0
+w1675370765
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z17 !s108 1675370766.000000
+R8
+R9
+!i113 1
+R10
+R11
+ndlatch_sync@enable
+vdlatch_syncEnable_vlg_vec_tst
+R16
+!i10b 1
+!s100 PU5O;U4gg:`_MPJoJ`:fi0
+IBPKe2bO8nMkcZQlXAMN4L0
+R2
+R0
+w1675370764
+8dlatch_syncEnable.vwf.vt
+Fdlatch_syncEnable.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+R17
+!s107 dlatch_syncEnable.vwf.vt|
+!s90 -work|work|dlatch_syncEnable.vwf.vt|
+!i113 1
+R10
+R11
+ndlatch_sync@enable_vlg_vec_tst
+vfour_bit_counter
+!s110 1675372474
+!i10b 1
+!s100 o9P]Ca?8QOz[m2?nV9;MT3
+I33Ri:lX^E]eM0`Hj]D5Tg0
+R2
+R0
+w1675372474
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z18 !s108 1675372474.000000
+R8
+R9
+!i113 1
+R10
+R11
+vfour_bit_counter_vlg_vec_tst
+!s110 1675372475
+!i10b 1
+!s100 eXXKB11URnJ1P3dMBG3TY1
+IkiA]eFem_KG<D?TQIW[3K1
+R2
+R0
+w1675372473
+8four_bit_counter.vwf.vt
+Ffour_bit_counter.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+R18
+!s107 four_bit_counter.vwf.vt|
+!s90 -work|work|four_bit_counter.vwf.vt|
+!i113 1
+R10
+R11
+vfour_one_multi
+Z19 !s110 1675371296
+!i10b 1
+!s100 S[HAE;9;=7Hc3agJFA18;2
+I9W6nO1[`ZzjGS;FLkBD5[0
+R2
+R0
+w1675371295
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z20 !s108 1675371296.000000
+R8
+R9
+!i113 1
+R10
+R11
+vfour_one_multi_vlg_vec_tst
+R19
+!i10b 1
+!s100 CDTSVcl[Z^Z_H5B2mkbFo3
+I=41_79P8cOj4dS3AlUnNn0
+R2
+R0
+w1675371294
+8four_one_multi.vwf.vt
+Ffour_one_multi.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+R20
+!s107 four_one_multi.vwf.vt|
+!s90 -work|work|four_one_multi.vwf.vt|
+!i113 1
+R10
+R11

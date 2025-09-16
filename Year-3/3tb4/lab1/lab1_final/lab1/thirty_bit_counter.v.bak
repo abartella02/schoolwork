@@ -1,0 +1,10 @@
+module thirty_bit_counter(input enable, 
+                         input low_reset, clk,
+                         output reg [29:0] out);
+  always @(posedge clk) begin
+    if(~low_reset)
+      out <= 30'b0;
+    else if(enable)
+      out <= out + 30'b1;
+  end
+endmodule

@@ -1,0 +1,20 @@
+module clock_divider (input clk, Reset_n, output reg clk_ms);
+  parameter factor=4;
+  reg [31:0] countQ;
+  always @ (posedge clk, negedge Reset_n) begin
+    if (!Reset_n) begin
+      clk_ms <= 1'b0;
+      countQ <= 32'h0;
+    end else begin
+        countQ <= countQ + 1'b1;
+	  if (countQ<factor/2) begin 
+        clk_ms <= 1'b0;
+      end else if (countQ<factor) begin 
+        clk_ms <= 1'b0;
+      end else begin //countQ==factor 
+        clk_ms <= 1'b1; 
+      	countQ <= 32'h0;
+      end
+    end 
+  end
+endmodule

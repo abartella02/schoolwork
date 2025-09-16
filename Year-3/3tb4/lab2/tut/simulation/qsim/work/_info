@@ -1,0 +1,136 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Shared/alex-bartella-schoolwork/3tb4/lab2/tut/simulation/qsim
+vclock_divider
+Z1 !s110 1675969370
+!i10b 1
+!s100 `WcJzc?:DBYW:VGRhFCFb2
+IGR1KdFzCV;^3H?og:`aBm0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1675969369
+Z3 8tut2.vo
+Z4 Ftut2.vo
+Z5 L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1675969370.000000
+Z8 !s107 tut2.vo|
+Z9 !s90 -work|work|tut2.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vclock_divider_vlg_vec_tst
+R1
+!i10b 1
+!s100 hzeoBk4kcaLXPg60T5W5[0
+I5MMInkzLz;]]44Nb8kWaz0
+R2
+R0
+w1675969368
+8clockdivider2.vwf.vt
+Fclockdivider2.vwf.vt
+Z12 L0 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 clockdivider2.vwf.vt|
+!s90 -work|work|clockdivider2.vwf.vt|
+!i113 1
+R10
+R11
+vcounter
+Z13 !s110 1675968932
+!i10b 1
+!s100 44SkaOnUACmBQQ<?ihS<H1
+IU1?^VRfAXf@WU=Wb89EKc1
+R2
+R0
+w1675968932
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z14 !s108 1675968932.000000
+R8
+R9
+!i113 1
+R10
+R11
+vcounter_vlg_vec_tst
+R13
+!i10b 1
+!s100 1^1TRVZOMK?KEL@:bD_?H1
+IfM6J5>9EKl59cJHoPj[kh0
+R2
+R0
+w1675968930
+8clockdivider.vwf.vt
+Fclockdivider.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+R14
+!s107 clockdivider.vwf.vt|
+!s90 -work|work|clockdivider.vwf.vt|
+!i113 1
+R10
+R11
+vtut2
+Z15 !s110 1675955507
+!i10b 1
+!s100 bT]3^f@1@DMCg@J21LMjT1
+IJekda[QYALWf_CZanU0B=0
+R2
+R0
+w1675955506
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z16 !s108 1675955507.000000
+R8
+R9
+!i113 1
+R10
+R11
+vtut2_vlg_vec_tst
+R15
+!i10b 1
+!s100 7n2HloW^G`nc9igdc[4@M1
+IV6LkRbChY3kk6]VdICljO2
+R2
+R0
+w1675955505
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+R16
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11
