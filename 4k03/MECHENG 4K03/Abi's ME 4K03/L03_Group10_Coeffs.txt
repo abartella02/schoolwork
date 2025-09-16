@@ -1,0 +1,13 @@
+coeff[  0]=      6375;
+coeff[  1]=         1;
+coeff[  2]=     -3656;
+coeff[  3]=         3;
+coeff[  4]=      4171;
+coeff[  5]=         4;
+coeff[  6]=     28404;
+coeff[  7]=         4;
+coeff[  8]=      4171;
+coeff[  9]=         3;
+coeff[ 10]=     -3656;
+coeff[ 11]=         1;
+coeff[ 12]=      6375;
