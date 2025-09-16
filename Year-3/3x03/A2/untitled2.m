@@ -1,0 +1,62 @@
+clear all; close all;
+f = @(x) sqrt(x);
+x1 = linspace(0, 2, 15);
+%a
+p = polyfit(x1, f(x1), length(x1)-1);
+
+x2 = linspace(0, 2, 100);
+figure(1);
+plot(x2, f(x2), 'r', x2, polyval(p, x2), 'b')
+title("f(x) and p(x) versus x: polyfit");
+xlabel("x"); ylabel("y");
+legend("f(x)", "p(x)")
+
+x2 = linspace(0, 2, 100);
+figure(2);
+semilogy(x2, abs(f(x2)-polyval(p, x2)))
+title("|f(x) - p(x)| versus x: polyfit")
+xlabel("x"); ylabel("y");
+
+%b
+
+p = spline(x1, f(x1), x2);
+
+x2 = linspace(0, 2, 100);
+figure(3);
+plot(x2, f(x2), 'r', x2, p, 'b')
+title("f(x) and p(x) versus x: spline");
+xlabel("x"); ylabel("y");
+legend("f(x)", "p(x)")
+
+x2 = linspace(0, 2, 100);
+figure(4);
+semilogy(x2, abs(f(x2)-p))
+title("|f(x) - p(x)| versus x: spline")
+xlabel("x"); ylabel("y");
+
+%c
+%p = chebyshevT(15, x2);
+
+p = polyfit(chebby(0, 2, 14), f(chebby(0, 2, 14)), length(x1)-1);
+
+x2 = linspace(0, 2, 100);
+figure(5);
+plot(x2, f(x2), 'r', x2, polyval(p, x2), 'b')
+title("f(x) and p(x) versus x: chebyshev");
+xlabel("x"); ylabel("y");
+legend("f(x)", "p(x)")
+
+x2 = linspace(0, 2, 100);
+figure(6);
+semilogy(x2, abs(f(x2)-polyval(p, x2)))
+title("|f(x) - p(x)| versus x: chebyshev")
+xlabel("x"); ylabel("y");
+
+function x = chebby(a, b, n)
+    x = zeros(1, n);
+    for i= 1:n
+        j = i-1
+        x(i) = 1/2*(a+b)+1/2*(b-a)*cos(pi*(2*j+1)/(2*n+2));
+    end
+end
+

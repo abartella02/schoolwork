@@ -1,0 +1,70 @@
+{
+    "LowerRateLimit":{
+        "Range":[30,175],
+        "Inc":5,
+        "Default":120,
+        "Spinbox": null,
+        "Value":null
+
+    },
+    "UpperRateLimit":{
+        "Range":[50,175],
+        "Inc":5,
+        "Default":120,
+        "Spinbox": null,
+        "Value":null
+    },
+    "APulseAmplitude":{
+        "Range":[0.5, 7.0],
+        "Inc":0.5,
+        "Default":3.5,
+        "Spinbox": null,
+        "Value":null
+    },
+    "APulseWidth":{
+        "Range":[0.1, 1.9],
+        "Inc":0.1,
+        "Default":0.4,
+        "Spinbox": null,
+        "Value":null
+    },
+    "VPulseAmplitude":{
+        "Range":[0.5, 7.0],
+        "Inc":0.5,
+        "Default":3.5,
+        "Spinbox": null,
+        "Value":null
+    },
+    "VPulseWidth":{
+        "Range":[0.1, 1.9],
+        "Inc":0.1,
+        "Default":0.4,
+        "Spinbox": null,
+        "Value":null
+    },
+    "VRP":{
+        "Range":[150,500],
+        "Inc":10,
+        "Default":320,
+        "Spinbox": null,
+        "Value":null
+    },
+    "ARP":{
+        "Range":[150,500],
+        "Inc":10,
+        "Default":250,
+        "Spinbox": null,
+        "Value":null
+    },
+    "PVARP":null,
+    "PVARPExtension":null,
+    "Hysterisis":null,
+    "RateSmoothing":null,
+    "ATRDuration":null,
+    "ATRFallbackMode":null,
+    "ATRFallbackTime":null,
+    "ActivityThreshold":null,
+    "ResponseTime":null,
+    "ResponseFactor":null,
+    "RecoveryTime":null
+}
