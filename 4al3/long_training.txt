@@ -1,0 +1,44 @@
+(.venv) PS C:\Shared\4al3-final> python .\training.py && python .\test.py
+2024-12-08 04:17:47.402850: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-12-08 04:17:48.410200: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Loading model...
+total number of training points
+50000
+number of positive training points
+25000
+Setting input_dim to 2702150
+2024-12-08 04:19:03.236280: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Epoch 1/10
+5000/5000 - 8675s - 2s/step - accuracy: 0.8595 - loss: 0.3128
+Epoch 2/10
+5000/5000 - 8359s - 2s/step - accuracy: 0.9710 - loss: 0.0837
+Epoch 3/10
+5000/5000 - 8363s - 2s/step - accuracy: 0.9822 - loss: 0.0530
+Epoch 4/10
+5000/5000 - 8447s - 2s/step - accuracy: 0.9893 - loss: 0.0327
+Epoch 5/10
+5000/5000 - 8402s - 2s/step - accuracy: 0.9927 - loss: 0.0235
+Epoch 6/10
+5000/5000 - 8377s - 2s/step - accuracy: 0.9945 - loss: 0.0170
+Epoch 7/10
+5000/5000 - 8406s - 2s/step - accuracy: 0.9954 - loss: 0.0140
+Epoch 8/10
+5000/5000 - 8409s - 2s/step - accuracy: 0.9967 - loss: 0.0108
+Epoch 9/10
+5000/5000 - 8380s - 2s/step - accuracy: 0.9967 - loss: 0.0104
+Epoch 10/10
+5000/5000 - 8551s - 2s/step - accuracy: 0.9973 - loss: 0.0080
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+training took 1493.0 minutes
+2024-12-09 05:11:08.909065: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-12-09 05:11:10.746890: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+New dataset entered.
+Loading model...
+2024-12-09 05:12:03.644751: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+313/313 ━━━━━━━━━━━━━━━━━━━━ 155s 494ms/step
+test accuracy:  0.983
+test sensitivity:  0.9746
+test specificity:  0.9914
