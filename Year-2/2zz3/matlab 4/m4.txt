@@ -1,0 +1,106 @@
+%
+%
+% Question 1
+x = 0:0.01:1;
+yA = x;
+yB = x.^3;
+
+A = [-10*(yA + 0.8).^(3.2)];
+B = [-10*(yB + 0.8).^(3.2)];
+
+dx = zeros(1, 1001);
+fA = zeros(1, 1001);
+fB = zeros(1, 1001);
+
+for i = 1:100
+   dx(i) = x(i + 1) - x(i);
+   fA(i) = A(1, i)*dx(i);
+   fB(i) = B(1, i)*dx(i);
+end
+
+w_A = sum(fA)
+w_B = sum(fB)
+
+
+%
+%
+% Question 2
+x = 0:0.001:1;
+yA = x;
+yB = x.^3;
+
+A_i = [-10*(yA + 0.8).^(3.2)];
+A_j = [-32*(yA + 0.8).^(2.2).*x];
+
+B_i = [-10*(yB + 0.8).^(3.2)];
+B_j = [-32*(yB + 0.8).^(2.2).*x];
+
+fA = zeros(1, 1001);
+fB = zeros(1, 1001);
+dx = zeros(1, 1001);
+dyA = zeros(1, 1001);
+dyB = zeros(1, 1001);
+
+for i = 1:1000
+    dx(i) = x(i + 1) - x(i);
+    dyA(i) = yA(i + 1) - yA(i);
+    dyB(i) = yB(i + 1) - yB(i);
+
+    fA(i) = A_i(i)*dx(i) + A_j(i)*dyA(i);
+    fB(i) = B_i(i)*dx(i) + B_j(i)*dyB(i);
+end
+
+w_A = sum(fA)
+w_B = sum(fB)
+
+p = @(x, y) x.*(-10)*(y + 0.8).^3.2;
+w = p(1, 1) - p(0, 0)
+
+%
+%
+% Question 3
+u = linspace(0, 2*pi, 40);
+v = linspace(0, 2*pi, 40);
+
+[u, v] = meshgrid(u, v);
+x = (4 + 8*cos(v)).*cos(u);
+y = (4 + 8*cos(v)).*sin(u);
+z = sin(v).*8;
+
+surf(x, y, z);
+axis equal;
+title('Alex Bartella, 400308868');
+
+%
+%
+% Problem 4
+
+x = @(u, v) (5 + 8*cos(v)).*cos(u);
+y = @(u, v) (5 + 8*cos(v)).*sin(u);
+z = @(u, v) sin(v).*8;
+
+x_u = @(u, v) (5 + 8*cos(v)).*(-sin(u));
+x_v = @(u, v) -8*sin(v).*cos(u);
+
+y_u = @(u, v) (5 + 8*cos(v)).*cos(u);
+y_v = @(u, v) (-8*sin(v)).*sin(u);
+
+z_u = @(u, v) 0;
+z_v = @(u, v) 8*cos(v);
+
+x_r = @(u, v) y_u(u, v).*z_v(u, v) - z_u(u, v).*y_v(u, v);
+y_r = @(u, v) z_u(u, v).*x_v(u, v) - x_u(u, v).*z_v(u, v);
+z_r = @(u, v) x_u(u, v).*y_v(u, v) - y_u(u, v).*x_v(u, v);
+
+u = linspace(0, 2*pi, 40);
+v = linspace(0, 2*pi, 40);
+[u, v] = meshgrid(u, v);
+
+n = @(u, v) sqrt(x_r(u, v).^2 + y_r(u, v).^2 + z_r(u, v).^2);
+
+g = @(u, v) n;
+
+A = integral2( g(u,v), 0, 2*pi, 0, 2*pi )
+
+
+

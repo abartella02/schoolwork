@@ -1,0 +1,127 @@
+%
+%
+%q1
+stream = fopen("C:\Shared\alex-bartella-schoolwork\2ZZ3\math2zz3_hw1_data_file.txt");
+data = fscanf(stream, '%g%g%g%u', [4 2000]);
+fclose(stream);
+
+t = data(4,:);
+rP = 6*data(1,:);
+rQ = 8*data(2,:);
+rR = 6*data(3,:);
+
+plot3(rP, rQ, rR, 'Linewidth', 2);
+xlabel('P'); ylabel('Q'); zlabel('R');
+title('Alexander Bartella, 400308868');
+
+%
+%
+%q2
+clear;
+stream = fopen("C:\Shared\alex-bartella-schoolwork\2ZZ3\math2zz3_hw1_data_file.txt");
+data = fscanf(stream, '%g%g%g%u', [4 2000]);
+fclose(stream);
+
+t = data(4,:);
+N = length(t);
+
+rP = 3*data(1,:);
+rQ = 7*data(2,:);
+rR = 3*data(3,:);
+
+dx = zeros(1, N-1);
+dy = zeros(1, N-1);
+dz = zeros(1, N-1);
+dr_mag = zeros(1, N-1);
+
+Tx = zeros(1, N-1); 
+Ty = zeros(1, N-1);
+Tz = zeros(1, N-1);
+T_mag = zeros(1, N-1);
+
+dTx = zeros(1, N-1); 
+dTy = zeros(1, N-1);
+dTz = zeros(1, N-1);
+dT_mag = zeros(1, N-1);
+
+for i = 1:N-1 %r'(t)
+   drx(i) = ( rP(i+1) - rP(i) )/( t(i+1) - t(i) );
+   dry(i) = ( rQ(i+1) - rQ(i) )/( t(i+1) - t(i) );
+   drz(i) = ( rR(i+1) - rR(i) )/( t(i+1) - t(i) );
+   
+   dr_mag(i) = ( drx(i)^2 + dry(i)^2 + drz(i)^2 )^(1/2);
+end 
+
+
+for i = 1:N-1
+   Tx(i) = drx(i)/dr_mag(i);
+   Ty(i) = dry(i)/dr_mag(i);
+   Tz(i) = drz(i)/dr_mag(i);
+
+   T_mag(i) = ( Tx(i)^2 + Ty(i)^2 + Tz(i)^2 )^(1/2);
+end 
+
+T = [Tx' Ty' Tz'];
+
+Nx = zeros(1, N-1); 
+Ny = zeros(1, N-1);
+Nz = zeros(1, N-1);
+
+for i=1:N-2
+   dTx(i) = ( Tx(i+1) - Tx(i) )/( t(i+1) - t(i) );
+   dTy(i) = ( Ty(i+1) - Ty(i) )/( t(i+1) - t(i) );
+   dTz(i) = ( Tz(i+1) - Tz(i) )/( t(i+1) - t(i) );
+
+   dT_mag(i) = ( dTx(i)^2 + dTy(i)^2 + dTz(i)^2 )^(1/2);
+   Nx(i) = dTx(i)/dT_mag(i);
+   Ny(i) = dTy(i)/dT_mag(i);
+   Nz(i) = dTz(i)/dT_mag(i);
+
+end 
+
+N2 = [Nx' Ny' Nz'];
+
+B = cross(T, N2);
+
+T_mag(1);
+fprintf("     ^^ should = 1\n");
+
+%B(108, :);
+
+%
+%
+%q3
+
+Bx = B(:, 1)';
+By = B(:, 2)';
+Bz = B(:, 3)';
+
+%plot3(rP, rQ, rR, 'Linewidth', 2);
+%hold on;
+%title('Alexander Bartella, 400308868');
+%hold on;
+
+%t = 20:300:1820;
+
+%quiver3(rP(t), rQ(t), rR(t), Tx(t), Ty(t), Tz(t),0.1); %uncomment for q3
+%quiver3(rP(t), rQ(t), rR(t), Nx(t), Ny(t), Nz(t),0.1);
+%quiver3(rP(t), rQ(t), rR(t), Bx(t), By(t), Bz(t),0.1);
+
+%hold off;
+
+%
+%
+%q4
+
+k = zeros(1, N-2);
+
+for i = 1:N-2
+   k(i) = dT_mag(i)/dr_mag(i);
+end
+
+minimum = min(k);
+maximum = max(k);
+
+delta = maximum - minimum
+
+
