@@ -1,0 +1,28 @@
+-- Entities (13)
+Person
+Passenger
+Pilot
+CabinCrew
+GroundStaff
+Ticket
+Airline
+Airplane
+Country
+Airport
+Route
+ScheduledFlights
+Baggage
+
+-- RELATIONS (12)
+Buys (Passenger buys ticket)
+Flies (pilot flies airplane)
+worksfor (groundcrew works for airline)
+owns (airline owns airplane)
+In (airport in country)
+BelongsTo (airline belongs to country)
+source (airline is the source of a route)
+dest (airline is the destination of a route)
+has (airline has a Route)
+contains (scheduled flight contains a route)
+uses (airline uses shceduled flight)
+boughtfor (ticket bought for scheduled flight)

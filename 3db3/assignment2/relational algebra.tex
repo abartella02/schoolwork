@@ -1,0 +1,83 @@
+\documentclass[fleqn]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{tabto}
+\usepackage{amsmath}
+\usepackage[a4paper,margin=1cm]{geometry}
+
+\begin{document}
+\noindent 3a \\
+% \qquad
+\begin{equation*}
+    \begin{aligned}
+    &\pi_{TicketNo, avg\_baggage\_weight} (\gamma_{TicketNo, AVG(TotalWeight)\rightarrow avg\_baggage\_weight}\\
+    &\qquad (\sigma_{name="Air\ Canada"} (\rho_b(Baggage) \bowtie_{u.AirlineAlias=AirlineAlias\ \land \ u.RouteID=RouteID} \\
+    &\qquad ( Route \bowtie (\rho_t (Ticket) \bowtie_{t.FightNo=sf.FightNo\ \land \ t.FlightDepDate=sf.DepDate} \\
+ &\qquad \rho_{sf}(ScheduledFlight)))))) \\
+    \end{aligned}
+\end{equation*}
+\\
+\\
+3b \\
+% \qquad
+\begin{equation*}
+    \begin{aligned}
+    & \pi_{TicketNo, Total\_weight}(\sigma_{Total\_Weight > 90} \ (\gamma_{TicketNo, SUM(TotalWeight)\rightarrow Total\_Weight}( \\
+    & \qquad \sigma_{BagType = "Oversized" \ \land \ Fragile="False"}(\\
+    & \qquad \qquad Baggage \bowtie \rho_t(Ticket) \bowtie_{sf.FlightNo = t.FlightNo \ \land \ sf.DepDate = t.FlightDepDate} \\
+    & \qquad \qquad \rho_{sf}(\pi_{FlightNo, DepDate} ( \\ 
+    & \qquad \qquad \qquad \sigma_{ArrDate \geq "2023-12-10" \ \land \ Depdate \leq "2024-01-03"}(ScheduledFlights))) \\
+    & \qquad \qquad ) \\
+    & \qquad ) \\
+    & )) \\
+    \end{aligned}
+\end{equation*} \\
+
+
+\noindent 4
+% \qquad
+\begin{equation*}
+    \begin{aligned}
+    & Min\_Price = ( \\
+    & \qquad \pi_{min\_price} ( \gamma_{MIN(price) \rightarrow min\_price}( \\
+    & \qquad \qquad \rho_{t1}(Ticket) \bowtie_{t1.FlightNo = sf1.FlightNo \ \land \ t1.FlightDepDate = sf1.DepDate} \rho_{sf1}(ScheduledFlight) \\
+    & \qquad \qquad \bowtie_{r1.srcAirport = "YYZ" \ \land \ r1.dstAirport = "MCO"} \rho_{r1}(Route) \bowtie \rho_{b1}(Book) \\
+    & \qquad \qquad ) \\
+    & \qquad ) \\
+    & ) \\
+    &\ \\
+    & \pi_{TicketNo, FlightDepDate, Price, Website} ( \\
+    & \qquad \sigma_{price = Min\_Price} ( \\
+    & \qquad \qquad \rho_{t}(Ticket) \bowtie_{t.FlightNo = sf.FlightNo \ \land \ t.FlightDepDate = sf.DepDate} \rho_{sf}(ScheduledFlight) \\
+    & \qquad \qquad \bowtie_{r.srcAirport = "YYZ" \ \land \ r.dstAirport = "MCO"} \rho_{r}(Route) \bowtie \rho_{b}(Book) \\
+    & \qquad ) \\
+    & ) \\
+    \end{aligned}
+\end{equation*} \\
+
+\noindent 5a \\
+% \qquad
+\begin{equation*}
+    \begin{aligned}
+    & \pi_{RouteID, airlines} ( \\
+    & \qquad \tau_{airlines\ DESC}( \sigma_{airlines \geq 3}( \gamma_{RouteID, COUNT(airlineAlias) \rightarrow airlines}(Uses) \\
+    & ) \\
+    \end{aligned}
+\end{equation*} \\
+
+\noindent 5b \\
+% \qquad
+\begin{equation*}
+    \begin{aligned}
+    & Used\_Routes = \pi_{RouteID} (Used) \\
+    & \pi_{RouteID, srcAirport, dstAirport} (Route) - \pi_{RouteID, srcAirport, dstAirport} (\sigma_{RouteID \ \in \ Used\_Routes}(Route)) \\
+    \end{aligned}
+\end{equation*}
+
+
+
+
+
+
+
+
+\end{document}
